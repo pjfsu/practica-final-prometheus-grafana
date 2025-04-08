@@ -1,0 +1,14 @@
+practica-final-prometheus-grafana.pdf
+todo.txt
+
+# Vim swap files
+*.swp
+*.swo
+
+# Vim backup files
+*.bak
+*.tmp
+.*.sw?
+
+# Vim session files
+Session.vim
