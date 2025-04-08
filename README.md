@@ -487,6 +487,11 @@ Design and configure a dashboard in Grafana using the above PromQL queries.
   "version": 8
 }
 ```
+
+### Data Source
+
+![Data Source](screenshots/data_sources_prometheus.png)
+
 ### Dashboard Overview
 
 ![Dashboard Overview](screenshots/api_request_dashboard_overview.png)
