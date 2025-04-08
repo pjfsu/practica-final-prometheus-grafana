@@ -105,6 +105,21 @@ scrape_configs:
         - 'node-exporter:9100'
 ```
 
+### Check
+
+```console
+user@debian:~/Documents/pss/prometheus/final_lab$ podman ps -a
+CONTAINER ID  IMAGE                                            COMMAND               CREATED      STATUS          PORTS                    NAMES
+f5bd095907ff  docker.io/julius/prometheus-demo-service:latest                        3 hours ago  Up 3 hours ago  0.0.0.0:10000->8080/tcp  prometheus-service-demo-0
+5b06b7c689bf  docker.io/julius/prometheus-demo-service:latest                        3 hours ago  Up 3 hours ago  0.0.0.0:20000->8080/tcp  prometheus-service-demo-1
+ef29982e4667  docker.io/julius/prometheus-demo-service:latest                        3 hours ago  Up 3 hours ago  0.0.0.0:30000->8080/tcp  prometheus-service-demo-2
+506ff9441691  docker.io/prom/prometheus:latest                 --config.file=/et...  3 hours ago  Up 3 hours ago  0.0.0.0:9090->9090/tcp   prometheus
+c8ecaf8a28eb  docker.io/prom/node-exporter:latest                                    3 hours ago  Up 3 hours ago  0.0.0.0:9100->9100/tcp   node-exporter
+3ae1a3118729  docker.io/grafana/grafana:latest                                       3 hours ago  Up 3 hours ago  0.0.0.0:3000->3000/tcp   grafana
+```
+
+![Prometheus Up Check](screenshots/prometheus_up_check.png)
+
 ## 1. PromQL Queries
 
 ### 1.1) 90th Percentile of HTTP Request Duration
